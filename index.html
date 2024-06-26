@@ -22,8 +22,12 @@
   <body bgcolor="black" text="white">
     <p id="text1"></p> <!-- >_ -> loading -->
     <p id="text2"></p> <!-- loading os -->
-    <p id="text3" style="color: gold"></p> <!-- ascii --> 
-    <p id="text4" style="color: gold"></p> <!-- author -->
+    <p id="ascii1" style="color: gold"></p> <!-- ascii --> 
+    <p id="ascii2" style="color: gold"></p> <!-- ascii --> 
+    <p id="ascii3" style="color: gold"></p> <!-- ascii --> 
+    <p id="ascii4" style="color: gold"></p> <!-- ascii --> 
+    <p id="ascii5" style="color: gold"></p> <!-- ascii --> 
+    <p id="text3" style="color: gold"></p> <!-- author -->
     <script>
       document.getElementById('text1').innerHTML = `>`;
       setTimeout(function() {
@@ -45,13 +49,19 @@
         document.getElementById('text2').innerHTML = `Loading OS...`;
       }, 4000)
       setTimeout(function() {
-        document.getElementById('text3').innerHTML = `
+        document.getElementById('ascii1').innerHTML = ` BBBBB    OOOO   RRRRR   EEEEEE  DDDDD     W    W  EEEEEE  BBBBB     DDDDD   EEEEEE   SSSSS  K    K  TTTTTT   OOOO   PPPPP`;
+        document.getElementById('ascii2').innerHTML = ` B    B  O    O  R    R  E       D    D    W    W  E       B    B    D    D  E       S       K   K     TT    O    O  P    P`;
+        document.getElementById('ascii3').innerHTML = ` BBBBB   O    O  RRRRR   EEEEEE  D    D    W WW W  EEEEEE  BBBBB     D    D  EEEEEE   SSSS   KKKK      TT    O    O  PPPPP`;
+        document.getElementById('ascii4').innerHTML = ` B    B  O    O  R   R   E       D    D    WW  WW  E       B    B    D    D  E            S  K   K     TT    O    O  P`;
+        document.getElementById('ascii5').innerHTML = ` BBBBB    OOOO   R    R  EEEEEE  DDDDD     W    W  EEEEEE  BBBBB     DDDDD   EEEEEE  SSSSS   K    K    TT     OOOO   P`;
+        
+      /*  document.getElementById('text3').innerHTML = `
  BBBBB    OOOO   RRRRR   EEEEEE  DDDDD     W    W  EEEEEE  BBBBB     DDDDD   EEEEEE   SSSSS  K    K  TTTTTT   OOOO   PPPPP
  B    B  O    O  R    R  E       D    D    W    W  E       B    B    D    D  E       S       K   K     TT    O    O  P    P
  BBBBB   O    O  RRRRR   EEEEEE  D    D    W WW W  EEEEEE  BBBBB     D    D  EEEEEE   SSSS   KKKK      TT    O    O  PPPPP
  B    B  O    O  R   R   E       D    D    WW  WW  E       B    B    D    D  E            S  K   K     TT    O    O  P
  BBBBB    OOOO   R    R  EEEEEE  DDDDD     W    W  EEEEEE  BBBBB     DDDDD   EEEEEE  SSSSS   K    K    TT     OOOO   P
-        `;
+        `; */
       }, 5000)
       setTimeout(function() {
         document.getElementById('text3').innerHTML = `Made by METROGROUND and swepzEh (June 2024)`;
