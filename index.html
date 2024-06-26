@@ -76,8 +76,8 @@
 var canvas = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        this.canvas.width = '100vh';
+        this.canvas.height = '100vh';
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateDisplay, 20);
