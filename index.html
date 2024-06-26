@@ -69,8 +69,48 @@
       setTimeout(function() {
         document.getElementById('text3').innerHTML = `METROGROUND swepzEh and contributors 2024`;
       }, 6000)
-     
+     // CANVAS STUFF
+var canvas = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 100;
+        this.canvas.height = 500;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.interval = setInterval(updateDisplay, 20);
+    },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+setTimeout(function() {
+canvas.start();
+document.getElementById('text1').innerHTML = ``;
+document.getElementById('text2').innerHTML = ``;
+document.getElementById('text3').innerHTML = ``;
+document.getElementById('ascii1').innerHTML = ``;
+document.getElementById('ascii2').innerHTML = ``;
+document.getElementById('ascii3').innerHTML = ``;
+document.getElementById('ascii4').innerHTML = ``;
+document.getElementById('ascii5').innerHTML = ``;
+}, 8000)
       
+function component(width, height, color, x, y) {
+    this.width = width;
+    this.height = height;
+    this.x = x;
+    this.y = y;    
+    this.update = function(){
+        ctx = canvas.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+}
+
+function updateDisplay() {
+    canvas.clear();
+}
         </script>
   </body>
 </html>
