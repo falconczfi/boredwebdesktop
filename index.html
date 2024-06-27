@@ -35,6 +35,8 @@
     <pre id="ascii5" style="color: gold"></pre> <!-- ascii --> 
     <p id="text3" style="color: gold"></p> <!-- author -->
     <script>
+      var desktopItems = [];
+      var fileSystem = [];
       document.getElementById('text1').innerHTML = `>`;
       setTimeout(function() {
         document.getElementById('text1').innerHTML = `>_`;
@@ -99,7 +101,7 @@ document.getElementById('ascii4').innerHTML = ``;
 document.getElementById('ascii5').innerHTML = ``;
 }, 8000)
       
-function component(width, height, color, x, y) {
+function obj(width, height, color, x, y) {
     this.width = width;
     this.height = height;
     this.x = x;
