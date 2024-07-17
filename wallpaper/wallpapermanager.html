@@ -29,22 +29,22 @@
       if(wallpaper_id == 'darkgreen') {
         if(!localStorage.currentWallpaper) {
           console.log('WallpaperManager/setWP: There is no local storage key for the current wallpaper setting, creating one...')
-          localStorage.setKey('currentWallpaper', 0)
+          localStorage.setItem('currentWallpaper', 0)
           console.log('WallpaperManager/setWP: Created local storage key for the current wallpaper setting')
-          localStorage.setKey('currentWallpaper', 'DARK_GREEN')
+          localStorage.setItem('currentWallpaper', 'DARK_GREEN')
           console.log('WallpaperManager/setWP: Wallpaper set as DARK_GREEN / https://falconczfi.github.io/boredwebdesktop/wallpaper/dark_green.png')
         } else {
-          localStorage.setKey('currentWallpaper', 'DARK_GREEN')
+          localStorage.setItem('currentWallpaper', 'DARK_GREEN')
         }
       } else if(wallpaper_id == 'default') {
         if(!localStorage.currentWallpaper) {
           console.log('WallpaperManager/setWP: There is no local storage key for the current wallpaper setting, creating one...')
-          localStorage.setKey('currentWallpaper', 0)
+          localStorage.setItem('currentWallpaper', 0)
           console.log('WallpaperManager/setWP: Created local storage key for the current wallpaper setting')
-          localStorage.setKey('currentWallpaper', 'DEFAULT')
+          localStorage.setItem('currentWallpaper', 'DEFAULT')
           console.log('WallpaperManager/setWP: Wallpaper set as DEFAULT / https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_blue.png')
         } else {
-          localStorage.setKey('currentWallpaper', 'DEFAULT')
+          localStorage.setItem('currentWallpaper', 'DEFAULT')
         }
       } else {
         return false;
