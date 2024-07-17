@@ -75,6 +75,7 @@
         document.getElementById('text3').innerHTML = `METROGROUND swepzEh and contributors 2024`;
       }, 6000)
      // CANVAS STUFF
+var background;
 var canvas = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -99,8 +100,20 @@ document.getElementById('ascii2').innerHTML = ``;
 document.getElementById('ascii3').innerHTML = ``;
 document.getElementById('ascii4').innerHTML = ``;
 document.getElementById('ascii5').innerHTML = ``;
+background = new img(this.canvas.width, this.canvas.height, 'https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_blue.png');
 }, 8000)
-      
+function img(width, height, src, x, y) {
+  this.image = new Image();
+  this.image.src = src;
+  this.width = width;
+  this.height = height;
+  this.x = x;
+  this.y = y;    
+  this.update = function() {
+        ctx = canvas.context;
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    }
+}
 function obj(width, height, color, x, y) {
     this.width = width;
     this.height = height;
@@ -113,8 +126,13 @@ function obj(width, height, color, x, y) {
     }
 }
 
+
+function updateWallpaper() {
+  
+}
 function updateDisplay() {
     canvas.clear();
+    background.update();
 }
         </script>
   </body>
