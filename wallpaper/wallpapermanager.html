@@ -48,6 +48,50 @@
           localStorage.setItem('currentWallpaper', 'DEFAULT')
           console.log('WallpaperManager/setWP: Wallpaper set as DEFAULT / https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_blue.png')
         }
+      } else if(wallpaper_id == 'light') {
+        if(!localStorage.currentWallpaper) {
+          console.log('WallpaperManager/setWP: There is no local storage key for the current wallpaper setting, creating one...')
+          localStorage.setItem('currentWallpaper', 0)
+          console.log('WallpaperManager/setWP: Created local storage key for the current wallpaper setting')
+          localStorage.setItem('currentWallpaper', 'LIGHT')
+          console.log('WallpaperManager/setWP: Wallpaper set as LIGHT / https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_light.png')
+        } else {
+          localStorage.setItem('currentWallpaper', 'LIGHT')
+          console.log('WallpaperManager/setWP: Wallpaper set as DEFAULT / https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_light.png')
+        }
+      } else if(wallpaper_id == 'gRed') {
+        if(!localStorage.currentWallpaper) {
+          console.log('WallpaperManager/setWP: There is no local storage key for the current wallpaper setting, creating one...')
+          localStorage.setItem('currentWallpaper', 0)
+          console.log('WallpaperManager/setWP: Created local storage key for the current wallpaper setting')
+          localStorage.setItem('currentWallpaper', 'GRED')
+          console.log('WallpaperManager/setWP: Wallpaper set as GRED / https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_red.png')
+        } else {
+          localStorage.setItem('currentWallpaper', 'GRED')
+          console.log('WallpaperManager/setWP: Wallpaper set as GRED / https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_red.png')
+        }
+      } else if(wallpaper_id == 'gBlue') {
+        if(!localStorage.currentWallpaper) {
+          console.log('WallpaperManager/setWP: There is no local storage key for the current wallpaper setting, creating one...')
+          localStorage.setItem('currentWallpaper', 0)
+          console.log('WallpaperManager/setWP: Created local storage key for the current wallpaper setting')
+          localStorage.setItem('currentWallpaper', 'GBLUE')
+          console.log('WallpaperManager/setWP: Wallpaper set as GBLUE / https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_blue.png')
+        } else {
+          localStorage.setItem('currentWallpaper', 'GBLUE')
+          console.log('WallpaperManager/setWP: Wallpaper set as GBLUE / https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_blue.png')
+        }
+      } else if(wallpaper_id == 'gGreen') {
+        if(!localStorage.currentWallpaper) {
+          console.log('WallpaperManager/setWP: There is no local storage key for the current wallpaper setting, creating one...')
+          localStorage.setItem('currentWallpaper', 0)
+          console.log('WallpaperManager/setWP: Created local storage key for the current wallpaper setting')
+          localStorage.setItem('currentWallpaper', 'GGREEN')
+          console.log('WallpaperManager/setWP: Wallpaper set as GGREEN / https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_green.png')
+        } else {
+          localStorage.setItem('currentWallpaper', 'GGREEN')
+          console.log('WallpaperManager/setWP: Wallpaper set as GGREEN / https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_green.png')
+        }
       } else {
         return false;
         console.error('WallpaperManager/setWP failed: A nonexistent wallpaper was selected; use "darkgreen" or "default"')
@@ -63,12 +107,24 @@
   <table border="2">
     <tr>
       <td><img src="boredwebdesktop_blue.png" height="120" width="200"></td>
+      <td><img src="boredwebdesktop_light.png" height="120" width="200"></td>
       <td><img src="dark_green.png" height="120" width="200"></td>
     </tr>
     <tr>
       <!-- the select button style is from tank arcade btw -->
-      <td><center><button class="selectbtn" onclick="setWP('default');">Select</button></center></td>
-      <td><center><button class="selectbtn" onclick="setWP('darkgreen');">Select</button></center></td>
+      <td bgcolor="#7f94eb"><center><button class="selectbtn" onclick="setWP('default');">Select</button></center></td>
+      <td bgcolor="#d9eb7f"><center><button class="selectbtn" onclick="setWP('light');">Select</button></center></td>
+      <td bgcolor="#304a2b"><center><button class="selectbtn" onclick="setWP('darkgreen');">Select</button></center></td>
+    </tr>
+    <tr>
+      <td><img src="gradient_blue.png" height="120" width="200"></td>
+      <td><img src="gradient_green.png" height="120" width="200"></td>
+      <td><img src="gradient_red.png" height="120" width="200"></td>
+    </tr>
+    <tr>
+      <td bgcolor="#59a3cf"><center><button class="selectbtn" onclick="setWP('gBlue');">Select</button></center></td>
+      <td bgcolor="#59cf70"><center><button class="selectbtn" onclick="setWP('gGreen');">Select</button></center></td>
+      <td bgcolor="#cf5959"><center><button class="selectbtn" onclick="setWP('gRed');">Select</button></center></td>
     </tr>
   </table>
   </center>
