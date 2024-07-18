@@ -138,6 +138,14 @@ function updateWallpaper() {
       background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_blue.png'
     } else if(localStorage.currentWallpaper == 'DARK_GREEN') {
       background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/dark_green.png'
+    } else if(localStorage.currentWallpaper == 'LIGHT') {
+      background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_light.png'
+    } else if(localStorage.currentWallpaper == 'GRED') {
+      background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_red.png'
+    } else if(localStorage.currentWallpaper == 'GBLUE') {
+      background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_blue.png'
+    } else if(localStorage.currentWallpaper == 'GGREEN') {
+      background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_green.png'
     } else {
       console.error('Desktop/updateWallpaper failed: Invalid wallpaper ID in the local storage wallpaper settings')
       alert('Desktop/updateWallpaper failed: Invalid wallpaper ID in the local storage wallpaper settings, to remove this error, go to DevTools console (Ctrl + Shift + I or F12) and type localStorage.currentWallpaper = \'DEFAULT\'; or clear the site data and cookies')
