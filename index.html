@@ -76,6 +76,9 @@
       }, 6000)
      // CANVAS STUFF
 var background;
+var desktopIcons = [
+   new img(50, 50, 'https://falconczfi.github.io/boredwebdesktop/wallpaper/icon.png', 0, 0, alert('TEST XD'))
+];
 var canvas = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -102,9 +105,14 @@ document.getElementById('ascii4').innerHTML = ``;
 document.getElementById('ascii5').innerHTML = ``;
 background = new img(canvas.canvas.width, canvas.canvas.height, 'https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_blue.png', 0, 0);
 }, 8000)
-function img(width, height, src, x, y) {
+function img(width, height, src, x, y, onclick) {
   this.image = new Image();
   this.image.src = src;
+  if(!onclick) {
+    console.log('Desktop/img: No onclick attribute specified for the image at ' + x + ', ' + y + ' (' + src + ')');
+  } else {
+    this.image.onclick = onclick;
+  }
   this.width = width;
   this.height = height;
   this.x = x;
@@ -155,6 +163,9 @@ function updateWallpaper() {
 function updateDisplay() {
     canvas.clear();
     background.update();
+    desktopIcons.forEach(icon => {
+      icon.update(); // Update all icons in the array xd
+    })
 }
 
       setInterval(function() {
