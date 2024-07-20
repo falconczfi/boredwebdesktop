@@ -1,1 +1,24 @@
-
+<html>
+  <head>
+    <title>Tank Arcade</title>
+    <style>
+      body {
+        font-family: Calibri;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <pre id="txt">            Loading TankArcade embed...          </pre>
+    </center>
+    <embed style="display: none;" width="240" height="240" id="frame" src="about:blank">
+  </body>
+  <script>
+    setTimeout(function() {
+    document.getElementById('txt').style.display = 'none';
+    document.getElementById('frame').style.display = 'inline';
+    document.getElementById('frame').width = window.screen.width;
+    document.getElementById('frame').height = window.screen.height;
+    }, 3000);
+  </script>
+</html>
