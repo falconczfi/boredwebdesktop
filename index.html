@@ -106,7 +106,7 @@ background = new img(canvas.canvas.width, canvas.canvas.height, 'https://falconc
 }, 8000)
 function img(width, height, src, x, y, onclick) {
   this.image = new Image();
-  this.image.src = src;
+  this.image.src = src; // uwu
   this.onclick = function() {
     
   }
@@ -136,14 +136,14 @@ function obj(width, height, color, x, y) {
     }
 }
 
-
+// Update wallpaper based on ID xd
 function updateWallpaper() {
-  if(!localStorage.currentWallpaper) {
+  if(!localStorage.currentWallpaper) { // create the local storage key if it doesn't exist
     console.log('Desktop/updateWallpaper: The local storage key for the wallpaper setting doesn\'t exist, creating it...')
     localStorage.setItem('currentWallpaper', 'DEFAULT');
     console.log('Desktop/updateWallpaper: The local storage key for the wallpaper setting was created and set as DEFAULT')
     background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_blue.png'
-  } else {
+  } else { // If the local storage key for the wallpaper exists then update the wallpaper based on id, wow simple solution
     if(localStorage.currentWallpaper == 'DEFAULT') {
       background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/boredwebdesktop_blue.png'
     } else if(localStorage.currentWallpaper == 'DARK_GREEN') {
@@ -156,13 +156,13 @@ function updateWallpaper() {
       background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_blue.png'
     } else if(localStorage.currentWallpaper == 'GGREEN') {
       background.image.src = 'https://falconczfi.github.io/boredwebdesktop/wallpaper/gradient_green.png'
-    } else {
+    } else { // This is obvious, if the wallpaper ID is invalid you're basically fucked cause it's gonna spam and it's all ur problem
       console.error('Desktop/updateWallpaper failed: Invalid wallpaper ID in the local storage wallpaper settings')
       alert('Desktop/updateWallpaper failed: Invalid wallpaper ID in the local storage wallpaper settings, to remove this error, go to DevTools console (Ctrl + Shift + I or F12) and type localStorage.currentWallpaper = \'DEFAULT\'; or clear the site data and cookies')
     }
   }
 }
-function updateDisplay() {
+function updateDisplay() { // update canvas
     canvas.clear();
     background.update();
     desktopIcons.forEach(icon => {
@@ -173,7 +173,7 @@ function updateDisplay() {
     });
     
 }
-
+      // update the wallpaper every 500ms wow no shit xd
       setInterval(function() {
         updateWallpaper();
       }, 500)
